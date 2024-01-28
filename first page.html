@@ -1,0 +1,116 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=25px, initial-scale=1.0">
+    <title>User Information Form</title>
+
+
+   <style>
+        body {
+            font-family: commic sans, cursive;
+            margin: 15px;
+        }
+        label {
+            display: block;
+           margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+	.pageHeading{
+		display:flex;
+		gap:1rem;
+		
+	}
+    </style>
+</head>
+<body>
+
+  <div class = "pageHeading">  
+		<h1> welcome to healthy bites, please fill this form </h1>
+		<img src="C:\Hackathon Competiton\1st pg pic.PNG"width=80px;length=50px >
+	</div> 
+
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <small>Format: 10 digits without spaces or dashes</small>
+
+       <label for="illness">Select Illness:</label>
+        <select id="illness" name="illness" required>
+            <option value="" disabled selected>Select an illness</option>
+            <option value="Fever">Fever</option>
+            <option value="Cold">Cold</option>
+            <option value="Cough">Cough</option>
+            <option value="Headache">Headache</option>
+            <option value="Nausea">Nausea</option>
+            <option value="Fatigue">Fatigue</option>
+            <option value="Sore Throat">Sore Throat</option>
+            <option value="Bodyache">Bodyache</option>
+            <option value="Shortness of Breath">Shortness of Breath</option>
+            <option value="Stomach Pain">Stomach Pain</option>
+        </select>
+
+        <button type="button" onclick="navigateToPage()">Submit</button>
+    </form>
+
+    <script>
+        function navigateToPage() {
+            // Get the selected value from the dropdown
+            var selectedIllness = document.getElementById('illness').value;
+
+            // Redirect to the corresponding page based on the selected value
+           if (selectedIllness === 'Fever') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Fever.html'
+
+             } else if (selectedIllness === 'Cold') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Cold.html';   
+              
+            } else if (selectedIllness === 'Cough') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Cough.html';
+
+            } else if (selectedIllness === 'Headache') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Head%20Ache.html';
+
+            } else if (selectedIllness === 'Nausea') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/nausea.html';
+
+            } else if (selectedIllness === 'Fatigue') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Fatigue.html';
+
+            } else if (selectedIllness === 'Sore Throat') {
+               window.location.href = 'file:///C:/Hackathon%20Competiton/sore%20throat.html';
+
+            } else if (selectedIllness === 'Bodyache') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Body%20ache.html';
+
+            } else if (selectedIllness === 'Shortness of Breath') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/Shortness%20of%20breath.html';
+
+            } else if (selectedIllness === 'Stomach Pain') {
+                window.location.href = 'file:///C:/Hackathon%20Competiton/stomach%20pain.html';
+            }
+        }
+    </script>
+
+</body>
+</html>
